@@ -12,7 +12,7 @@ class DetailDrinkPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Cocktail Details')), // Agregar título
+      appBar: AppBar(title: Text('Detalles')),
       body: FutureBuilder<CocktailDetail>(
         future: CocktailService().fetchCocktailDetail(id),
         builder: (context, snapshot) {
@@ -31,30 +31,19 @@ class DetailDrinkPage extends StatelessWidget {
                   SizedBox(height: 16),
                   Text(cocktailDetail.name, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
                   SizedBox(height: 8),
-                  Text('Ingredients:', style: TextStyle(fontSize: 18)),
+                  Text('Ingredientes:', style: TextStyle(fontSize: 18)),
                   ...cocktailDetail.ingredients.map((ingredient) => Text(ingredient)),
                   SizedBox(height: 8),
-                  Text('Instructions:', style: TextStyle(fontSize: 18)),
+                  Text('Instrucciones:', style: TextStyle(fontSize: 18)),
                   Text(cocktailDetail.instructions),
                 ],
               ),
             );
           } else {
-            return Center(child: Text('No data available'));
+            return Center(child: Text('Sin informacion'));
           }
         },
         ),
-        bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),// Agregar icono y etiqueta
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'List Drinks'),  // Agregar icono y etiqueta
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'), // Agregar icono y etiqueta
-        ],
-        ),
-
-      );
-
-
-    
+      );   
   }
 }

@@ -41,7 +41,7 @@ class _ListDrinksPageState extends State<ListDrinksPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('List Drinks')),
+      appBar: AppBar(title: Text('Cocteles disponibles')),
       body: isLoading
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(
@@ -62,13 +62,6 @@ class _ListDrinksPageState extends State<ListDrinksPage> {
                 );
               },
             ),
-      /*bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'List Drinks'),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-        ],
-      ),*/
     );
   }
 }
