@@ -1,4 +1,3 @@
-// pages/list_drinks_page.dart
 import 'package:cocktail_app/screens/detail_drink_screen.dart';
 import 'package:flutter/material.dart';
 import '../services/cocktail_service.dart';
@@ -9,6 +8,7 @@ class ListDrinksPage extends StatefulWidget {
   _ListDrinksPageState createState() => _ListDrinksPageState();
 }
 
+  // Estado de la página de lista de cócteles
 class _ListDrinksPageState extends State<ListDrinksPage> {
   final CocktailService cocktailService = CocktailService();
   List<Cocktail> cocktails = [];
@@ -20,6 +20,7 @@ class _ListDrinksPageState extends State<ListDrinksPage> {
     fetchCocktails();
   }
 
+  // Obtener cócteles por categoría
   Future<void> fetchCocktails() async {
     try {
       final fetchedCocktails = await cocktailService.fetchCocktailsByCategory('Cocktail');
@@ -35,6 +36,8 @@ class _ListDrinksPageState extends State<ListDrinksPage> {
     }
   }
 
+
+  // Construir la página de lista de cócteles
   @override
   Widget build(BuildContext context) {
     return Scaffold(

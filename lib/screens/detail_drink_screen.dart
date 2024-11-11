@@ -1,17 +1,18 @@
-// pages/detail_drink_screen.dart
 import 'package:cocktail_app/models/cocktail.dart';
 import 'package:cocktail_app/services/cocktail_service.dart';
 import 'package:flutter/material.dart';
 
+// Página de detalles de un cóctel
 class DetailDrinkPage extends StatelessWidget {
   final String id;
 
   DetailDrinkPage({required this.id});
 
+  // Construir la página de detalles
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Cocktail Details')),
+      appBar: AppBar(title: Text('Cocktail Details')), // Agregar título
       body: FutureBuilder<CocktailDetail>(
         future: CocktailService().fetchCocktailDetail(id),
         builder: (context, snapshot) {
@@ -45,9 +46,9 @@ class DetailDrinkPage extends StatelessWidget {
         ),
         bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'List Drinks'),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),// Agregar icono y etiqueta
+          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'List Drinks'),  // Agregar icono y etiqueta
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'), // Agregar icono y etiqueta
         ],
         ),
 

@@ -19,6 +19,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// Página principal
+
 class MainScreen extends StatefulWidget {
   @override
   _MainScreenState createState() => _MainScreenState();
@@ -39,6 +41,8 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
+
+    // Construir la página principal
   @override
   Widget build(BuildContext context) {
     return Scaffold(

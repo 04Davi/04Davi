@@ -3,11 +3,13 @@ import 'package:cocktail_app/models/cocktail.dart';
 import 'package:cocktail_app/services/cocktail_service.dart';
 import 'detail_drink_screen.dart';
 
+// Página de inicio
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
+  // Estado de la página de inicio
 class _HomePageState extends State<HomePage> {
   final cocktailService = CocktailService();
   List<Cocktail> cocktailList = [];
