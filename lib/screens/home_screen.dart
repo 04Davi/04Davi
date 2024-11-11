@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Welcome to Cocktail App')),
+      appBar: AppBar(title: Text('App de cocteles')),
       body: cocktailList.isEmpty
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(

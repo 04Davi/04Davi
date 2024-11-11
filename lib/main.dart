@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'The Cocktails App',
+      title: 'App de cocteles',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -32,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _pages = [
     HomePage(),
     ListDrinksPage(),
-    Center(child: Text('Search Page')), // Página de búsqueda, por implementar
+    Center(child: Text('Search Page')), 
   ];
 
   void _onTap(int index) {
