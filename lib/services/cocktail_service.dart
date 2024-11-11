@@ -1,10 +1,9 @@
-// services/cocktail_service.dart
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../models/cocktail.dart';
 
 class CocktailService {
-  static const String baseUrl = "https://www.thecocktaildb.com/api/json/v1/1";
+  static const String baseUrl = "https://www.thecocktaildb.com/api/json/v1/1";  // URL base de la API de The Cocktail DB
 
   // Obtener cócteles aleatorios
   Future<Cocktail> fetchRandomCocktail() async {

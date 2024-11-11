@@ -17,7 +17,7 @@ class _MainPageState extends State<MainPage> {
     ListDrinksPage(),
     //SearchPage(),
   ];
-
+      // Lista de páginas para la navegación
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +30,7 @@ class _MainPageState extends State<MainPage> {
             _currentIndex = index;
           });
         },
+        // Lista de elementos para la navegación
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.list), label: 'List Drinks'),
